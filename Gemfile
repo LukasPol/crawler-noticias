@@ -37,6 +37,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use pry-rails to help debug
+  gem 'pry-rails', '0.3.9'
+  # Use rubocop to help with good practices
+  gem 'rubocop-rails', '2.6.0'
+  gem 'rubocop-performance', '1.6.1'
+  # Use Rspec as the main testing framework, added on development environment to automatically handle with generators and tasks
+  gem 'rspec-rails', '4.0.1'
 end
 
 group :development do
@@ -54,6 +61,14 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  # Use database_cleaner to erase tests database
+  gem 'database_cleaner', '1.8.5'
+  # Use factory_bot_rails to help with the tests
+  gem 'factory_bot_rails', '5.2.0'
+  # Use FFaker to help generate random fields 
+  gem 'ffaker', '2.12.0'
+  # Use rspec-sidekiq to test jobs
+  gem 'rspec-sidekiq', '3.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
