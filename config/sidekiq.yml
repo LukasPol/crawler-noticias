@@ -1,0 +1,7 @@
+development:
+  :concurrency: 5
+  :queues:
+
+production:
+  :concurrency: 20
+  :queues:

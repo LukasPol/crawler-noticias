@@ -1,0 +1,22 @@
+default: &default
+  adapter:  postgresql
+  host: <%= ENV["POSTGRES_HOST"] %>
+  encoding: unicode
+  pool:     5
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+  template: template0
+
+development:
+  <<: *default
+  database: mycrawler_development
+
+test:
+  <<: *default
+  database: mycrawler_test
+
+production:
+  <<: *default
+  database: mycrawler_production
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD_PRODUCTION"] %>
