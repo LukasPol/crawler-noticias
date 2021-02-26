@@ -18,9 +18,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.2.1'
+# gem 'redis', '~> 4.2.1'
 # Use sidekiq as job worker
-gem 'sidekiq', '6.1.3'
+# gem 'sidekiq', '6.1.3'
 # Use dotenv-rails as environment variables manager
 gem 'dotenv-rails', '2.7.5'
 # Use Active Model has_secure_password
@@ -68,7 +68,7 @@ group :test do
   # Use FFaker to help generate random fields 
   gem 'ffaker', '2.12.0'
   # Use rspec-sidekiq to test jobs
-  gem 'rspec-sidekiq', '3.0.3'
+  # gem 'rspec-sidekiq', '3.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
