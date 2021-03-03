@@ -46,3 +46,9 @@ pt-BR:
         tags: "Tags"
         title: "Título"
         url: "URl"
+
+  time:
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d/%m/%Y %Hh%M"
+      short: "%d de %B, %H:%M"
