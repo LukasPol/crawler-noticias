@@ -1,0 +1,48 @@
+pt-BR:
+  are_you_sure: "Tem certeza?"
+  search: "Buscar"
+
+  list: "Ver listagem"
+  show_model: "Visualizar %{model}"
+
+  create: "Criado"
+  created_at: "criado em:"
+  created: "%{model} lfoi criado com sucesso."
+  created_f: "%{model} foi criada com sucesso."
+  create_model: "Criar %{model}"
+  creating_model: "Criando %{model}"
+  creating: "Criando"
+  delete: "Deletado"
+  deleted: "%{model} foi deletado com sucesso."
+  deleted_f: "%{model} foi deletada com sucesso."
+  edit_model: "Editar %{model}"
+  editing_model: "Editando %{model}"
+  editing: "Editando"
+  new_model: "Novo %{model}"
+  new_model_f: "Nova %{model}"
+  update: "Atualizado"
+  updated: "%{model} foi atualizado com sucesso."
+  updated_f: "%{model} foi atualizada com sucesso."
+
+  back: "Voltar"
+  close: "Fechar"
+  destroy: "Deletar"
+  show: "Visualizar"
+  details: "Visualizar"
+  edit: "Editar"
+  exit: "Sair"
+
+  activerecord:
+    models:
+      news: "Notícias"
+
+    attributes:
+      news:
+        body: "Corpo da notícia"
+        caption: "Sub-título"
+        date_publish: "Data publicada"
+        date_crawler: "Data da coleta"
+        source_news: "Fonte da notícia"
+        tags: "Tags"
+        title: "Título"
+        url: "URl"
