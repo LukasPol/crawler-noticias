@@ -5,7 +5,7 @@ class CreateNews < ActiveRecord::Migration[6.0]
       t.string :url
       t.string :title
       t.string :caption
-      t.datetime :date_publish
+      t.string :date_publish
       t.datetime :date_crawler
       t.text :body
       t.string :tags
