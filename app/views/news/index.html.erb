@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>News</h1>
+<h1><%= t(:news, scope: 'activerecord.models') %></h1>
 
 <%= search_form_for @q do |f| %>
   <div class="row mb-5">
     <div class="col-10 col-md-6 col-lg-3">
-      <%= f.search_field :title_cont, placeholder: 'Titulo da notícia', class: "form-control mr-2 col" %>
+      <%= f.search_field :title_cont, placeholder: t(:title, scope: 'activerecord.attributes.news'), class: "form-control mr-2 col" %>
     </div>
     <div class="col-10 col-md-6 col-lg-3">
-      <%= f.search_field :tags_cont, placeholder: 'Tag da notícia', class: "form-control mr-2 col" %>
+      <%= f.search_field :tags_cont, placeholder: t(:tags, scope: 'activerecord.attributes.news'), class: "form-control mr-2 col" %>
     </div>
     <div class="col-10 col-md-6 col-lg-3">
-      <%= f.select :source_news_eq, [['Cultura', 'Cultura'], ['Desenvolvimento Social', 'Desenvolvimento Social']], { include_blank: 'Fonte' }, class: "form-control mr-2 col" %>
+      <%= f.select :source_news_eq, [['Cultura', 'Cultura'], ['Desenvolvimento Social', 'Desenvolvimento Social']], { include_blank: t(:source_news, scope: 'activerecord.attributes.news') }, class: "form-control mr-2 col" %>
     </div>
     <div class="col-10 col-md-6 col-lg-3">
       <%= f.submit t(:search), class: "btn btn-primary btn-block" %>
@@ -31,10 +31,12 @@
         <div class="row">
           <p class="col-sm-7">
             <% unless news.tags.blank? %>
-              Tags: <%= news.tags %>
+              <%= t(:tags, scope: 'activerecord.attributes.news') %>: <%= news.tags %>
             <% end %>
           </p>
-          <p class="col-sm-5 text-right font-weight-bold">Fonte: <%= news.source_news %></p>
+          <p class="col-sm-5 text-right font-weight-bold">
+            <%=t(:source_news, scope: 'activerecord.attributes.news')%>: <%= news.source_news %>
+          </p>
         </div>
       </div>
     </div>
