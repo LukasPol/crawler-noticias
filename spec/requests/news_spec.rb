@@ -13,10 +13,6 @@
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/news", type: :request do
-  let!(:news) { create(:news) }
-
-  let!(:valid_attributes) { build(:news).attributes }
-
   describe 'GET /index' do
     it 'renders a successful response' do
       get news_index_url
@@ -24,11 +20,4 @@ RSpec.describe "/news", type: :request do
     end
   end
 
-
-  describe "GET /show" do
-    it "renders a successful response" do
-      get news_url(news)
-      expect(response).to be_successful
-    end
-  end
 end
