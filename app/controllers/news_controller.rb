@@ -3,6 +3,7 @@ class NewsController < ApplicationController
   def index
     CulturaScraping.new().scraping()
     DesenvolvimentoSocialScraping.new().scraping()
-    @news = News.all.paginate(page: params[:page], per_page: 5)
+    @q = News.ransack(params[:q])
+    @news = @q.result(distinct: true).paginate(page: params[:page], per_page: 20)
   end
 end
