@@ -1,12 +1,14 @@
 class NewsController < ApplicationController
   before_action :set_news, only: %i[ show ]
 
-  # GET /news or /news.json
+  # GET /news
   def index
     @news = News.all
+    CulturaScraping.new().scraping()
+    DesenvolvimentoSocialScraping.new().scraping()
   end
 
-  # GET /news/1 or /news/1.json
+  # GET /news/1
   def show
   end
 
