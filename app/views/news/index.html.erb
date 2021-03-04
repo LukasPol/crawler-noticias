@@ -2,13 +2,32 @@
 
 <h1>News</h1>
 
+<%= search_form_for @q do |f| %>
+  <div class="row mb-5">
+    <div class="col-10 col-md-6 col-lg-3">
+      <%= f.search_field :title_cont, placeholder: 'Titulo da notícia', class: "form-control mr-2 col" %>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <%= f.search_field :tags_cont, placeholder: 'Tag da notícia', class: "form-control mr-2 col" %>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <%= f.select :source_news_eq, [['Cultura', 'Cultura'], ['Desenvolvimento Social', 'Desenvolvimento Social']], { include_blank: 'Fonte' }, class: "form-control mr-2 col" %>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <%= f.submit t(:search), class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
+<% end %>
+
 <% @news.each do |news| %>
   <%= link_to news.url, class:"text-dark", style:'text-decoration: none', target:"_blank" do %>
     <div class="card mb-3" style="border-radius: 30px; box-shadow: 1px 1px 20px rgba(0,0,0,.3)">
       <div class="card-body">
         <h4 class="card-title"><%= news.title %></h4>
         <h6 class="card-subtitle mb-2 text-muted"><%= news.caption %></h6>
-        <p><%= news.body.html_safe.truncate_words(50) %></p>
+        <p>
+        <%= sanitize(sanitize(news.body, tags: ['br']).truncate(500))%>
+        </p>
         <div class="row">
           <p class="col-sm-7">
             <% unless news.tags.blank? %>

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_02_26_130338) do
     t.string "url"
     t.string "title"
     t.string "caption"
-    t.datetime "date_publish"
+    t.string "date_publish"
     t.datetime "date_crawler"
     t.text "body"
     t.string "tags"

@@ -32,7 +32,9 @@ gem 'dotenv-rails', '2.7.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'will_paginate', '3.3.0'
-gem 'will_paginate-bootstrap4', '~> 0.2.2'
+gem 'will_paginate-bootstrap4', '0.2.2'
+gem 'ransack', '2.4.1'
+
 
 
 group :development, :test do
